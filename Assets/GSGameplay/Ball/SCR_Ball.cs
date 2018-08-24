@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SCR_Ball : MonoBehaviour {
 	public const float BOUNCE_VELOCITY = 15;
@@ -25,5 +26,9 @@ public class SCR_Ball : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		rb.velocity = new Vector2(0, BOUNCE_VELOCITY);
+
+		if (other.gameObject.tag == "Ground") {
+			SceneManager.LoadScene("GSGameplay/SCN_Gameplay");
+		}
     }
 }
