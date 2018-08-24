@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SCR_Ball : MonoBehaviour {
-	public const float BOUNCE_VELOCITY = 10;
+	public const float BOUNCE_VELOCITY = 15;
 	public const float LIMIT_Y = 5.7f;
 
 	private Rigidbody2D rb;
