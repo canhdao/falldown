@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class SCR_Ball : MonoBehaviour {
 	public const float BOUNCE_VELOCITY = 15;
 	public const float LIMIT_Y = 5.7f;
+	
+	public GameObject PFB_COLLISION_EFFECT;
 
 	private Rigidbody2D rb;
 
@@ -30,5 +32,8 @@ public class SCR_Ball : MonoBehaviour {
 		if (other.gameObject.tag == "Ground") {
 			SceneManager.LoadScene("GSGameplay/SCN_Gameplay");
 		}
+		
+		Vector3 position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+		Instantiate(PFB_COLLISION_EFFECT, position, PFB_COLLISION_EFFECT.transform.rotation);
     }
 }
