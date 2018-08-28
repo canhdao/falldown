@@ -43,3 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ball
+    uniqueID: 911536575
+    locked: 0
+  - name: Platform
+    uniqueID: 3398946291
+    locked: 0
+  - name: CollisionEffect
+    uniqueID: 2274462741
+    locked: 0

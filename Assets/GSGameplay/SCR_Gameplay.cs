@@ -21,7 +21,7 @@ public class SCR_Gameplay : MonoBehaviour {
 		SCREEN_HEIGHT = Camera.main.orthographicSize * 2;
 		SCREEN_WIDTH = (float)Screen.width / Screen.height * SCREEN_HEIGHT;
 		
-		GenerateFirstRow();
+		// GenerateFirstRow();
 
 		boxes = GameObject.FindGameObjectsWithTag("Box");
 		startPositions = new Vector3[boxes.Length];
