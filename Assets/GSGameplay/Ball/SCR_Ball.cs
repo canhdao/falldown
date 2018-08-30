@@ -27,13 +27,15 @@ public class SCR_Ball : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		rb.velocity = new Vector2(0, BOUNCE_VELOCITY);
+		if (transform.position.y > other.transform.position.y) {
+			rb.velocity = new Vector2(0, BOUNCE_VELOCITY);
 
-		if (other.gameObject.tag == "Ground") {
-			SceneManager.LoadScene("GSGameplay/SCN_Gameplay");
+			if (other.gameObject.tag == "Ground") {
+				SceneManager.LoadScene("GSGameplay/SCN_Gameplay");
+			}
+			
+			Vector3 position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+			Instantiate(PFB_COLLISION_EFFECT, position, PFB_COLLISION_EFFECT.transform.rotation);
 		}
-		
-		Vector3 position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
-		Instantiate(PFB_COLLISION_EFFECT, position, PFB_COLLISION_EFFECT.transform.rotation);
     }
 }

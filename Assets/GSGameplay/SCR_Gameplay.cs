@@ -40,8 +40,8 @@ public class SCR_Gameplay : MonoBehaviour {
 			for (int i = 0; i < boxes.Length; i++) {
 				float dx = Input.mousePosition.x - mouseDownPosition.x;
 				float x = startPositions[i].x + dx * SCREEN_WIDTH / Screen.width;
-				float y = startPositions[i].y;
-				float z = startPositions[i].z;
+				float y = boxes[i].transform.position.y;
+				float z = boxes[i].transform.position.z;
 				boxes[i].transform.position = new Vector3(x, y, z);
 			}
 		}
