@@ -49,6 +49,9 @@ TagManager:
   - name: Platform
     uniqueID: 3398946291
     locked: 0
+  - name: Enemy
+    uniqueID: 3122199009
+    locked: 0
   - name: CollisionEffect
     uniqueID: 2274462741
     locked: 0
